@@ -49,6 +49,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 body, p, .site {
   font-family: 'Average', serif;
+  font-size: 16px;
 }
 
 .screen-reader-text {
@@ -121,6 +122,14 @@ body, p, .site {
 	margin: 9px 0 0 0;
 }
 
+.top-contact {
+  text-align: right;
+}
+
+.social-media-squares {
+  float: right;
+}
+
 .social-media-squares a {
 	border-right: 1px solid #8FCACF;
   display: block;
@@ -144,7 +153,7 @@ body, p, .site {
 }
 
 .navbar-nav > li.menu-item > a {
-	padding: 45px 20px 41px 20px; 
+	padding: 45px 15px 41px 15px; 
 }
 
 #site-navigation.navbar {
@@ -154,6 +163,31 @@ body, p, .site {
   font-weight: 200;
   letter-spacing: 1px;
 	margin: 0;
+}
+
+.mobile-nav-link {
+  display: block;
+  /*font-family: 'Raleway', sans-serif;*/
+  font-size: 1.9em;
+  margin: 0 0 0 0.3em;
+  position: relative;
+  text-align: left;
+  width: 1em;
+  z-index: 99999;
+}
+
+.mobile-menu {
+  background: #FFC18A;
+  border-bottom: 1px solid #244976;
+  color: #244976;
+  font-weight: 500;
+  line-height: 2em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.mobile-nav-link, .mobile-menu {
+  display: none;
 }
 
 /* Blog styles */
@@ -304,20 +338,184 @@ body, p, .site {
   content: "\f0e0";
 }
 
+.footer-contact .social-media-squares {
+  display: none;
+}
+
 /* Responsive queries */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
+  .top-contact {
+    text-align: center;
+  }
 
-  /* Footer contact styles for small devices */
-  .site-footer .footer-contact {
-    float: none; 
+  .social-media-squares {
+    float: none;
     margin: 0 auto;
     text-align: center;
   }
 
+  /* less and more responsive margins since nav is below logo now */
+  .navbar-nav > li.menu-item > a {
+    padding: 1em 0.8em; 
+  }
+
+  /* Make title next to logo 
+  .logo {
+    margin: 0.5em auto;
+    overflow: hidden;
+  }
+
+  .logo-img {
+    display: inline-block;
+    overflow: hidden;
+    float: left;
+    margin: 0 1% 0 37%;
+  }
+
+  .logo h3.site-title {
+    display: block;
+    float: left;
+    font-size: 2.1em;
+    margin-top: 25px;
+  }*/
+}
+
+/* Bootstrap xs size */
+@media screen and (max-width: 767px) {
+  /* Resize rows for smaller screen widths */
+  .call-top .col-xs-4 {
+    width: 45%;
+  }
+
+  .call-top .col-xs-4 h4 {
+    text-align: center;
+  }
+  
+  /* Hide topbar social media nav */
+  .call-top .social-media-squares {
+    display: none;
+  }
+
+  /* Responsive nav styles */
+  .main-navigation {
+    display: none;
+  }
+
+  .mobile-nav-link, .mobile-menu {
+    display: block;
+  }
+
+  #site-navigation.mobile-nav-top {
+    background: #fff;
+    display: block;
+    left: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 34%;
+    z-index: 99999;
+  }
+
+  #site-navigation.mobile-nav-top .navbar-nav {
+    margin: 0;
+  }
+
+  .main-navigation.mobile-nav-top li {
+    border-bottom: 1px solid #244976;
+    display: block;
+    line-height: 2em;
+    text-align: center;
+    width: 100%;
+  }
+
+  .main-navigation.mobile-nav-top li a {
+    padding: 0.7em;
+  }
+
+  .side-open.site {
+    right: -35%;
+    position: relative;
+  } 
+
+  /* Footer contact styles for small devices */
+  .site-footer .footer-contact {
+    float: none; 
+    font-size: 1.1em;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .footer-address:before,
+  .footer-phone:before,
+  .footer-email:before  {
+    content: '';
+    font-family: inherit;
+  }
+
   .footer-contact-address {
     margin: 0 auto;
-    max-width: 25%;
   }
 }
+
+/* Tablet sizes */
+@media screen and (max-width: 705px) {
+  /* Update margin % in header logo 
+  .logo-img {
+    margin-left: 33%;
+  }*/
+  /* Show social media links in footer */
+  .footer-contact .social-media-squares {
+    display: block;
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .footer-contact .social-media-squares a {
+    display: inline-block;
+    float: none;
+    font-size: 1.1em;
+    margin: 0;
+    padding: 0.3em 1em;
+  }
+
+}
+
+/* Small tablet sizes */
+@media screen and (max-width: 520px) { 
+  /* Top bar style for mobile styles */
+  .call-top .col-xs-4 {
+    float: none;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .call-top .col-xs-4 h4 {
+    margin-bottom: 0;
+  }
+
+  .call-top .col-xs-4 .top-contact {
+    margin: 0;
+    padding: 0.5em 0;
+  }
+
+  .mobile-nav-link {
+    font-size: 3em;
+    position: absolute;
+  }
+
+  /* Update margin % in header logo 
+  .logo-img {
+    margin-left: 25%;
+  }*/
+}
+
+/* Phone screen sizes - need to consult with client */
+/*@media screen and (max-width: 384px) {
+  /* Update margin % in header logo 
+  .logo-img {
+    margin-left: 18%;
+  }
+}*/
 

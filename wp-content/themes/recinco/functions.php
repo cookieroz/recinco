@@ -122,7 +122,7 @@ add_action('wp_enqueue_scripts','enqueue_our_required_stylesheets');
 function recinco_scripts() {
 	wp_enqueue_style( 'recinco-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'recinco-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	wp_register_script( 'mobile-nav', get_template_directory_uri().'/js/mobile-nav.js', array('jquery'), '1.11', true );
 
 	wp_enqueue_script( 'recinco-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
@@ -133,6 +133,8 @@ function recinco_scripts() {
 	wp_register_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
 
 	wp_enqueue_script( 'bootstrap-js' );
+
+	wp_enqueue_script( 'mobile-nav' );
 
 	wp_enqueue_style( 'bootstrap-css' );
 	

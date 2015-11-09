@@ -40,7 +40,7 @@
             <?php echo get_theme_mod( 'text_setting' ); ?>
           </p>
         </div>
-        <div class="col-md-3 col-sm-6 col-xs-10 footer-contact">
+        <div class="col-md-3 col-sm-5 col-xs-10 footer-contact">
           <h3><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h3>
           <ul class="footer-contact-address list-unstyled">
             <li class="footer-address">
@@ -50,6 +50,11 @@
             <li class="footer-phone"><a href="tel:+18184717492"><?php echo get_theme_mod( 'phone_setting' ); ?></a></li>
             <li class="footer-email">contact@yourdomain.com</li>
           </ul>
+          <div class="social-media-squares">
+            <a href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
+            <a href="http://linkedin.com/"><i class="fa fa-instagram"></i></a>
+            <a href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+          </div>
         </div>
       </div>
     </div>
