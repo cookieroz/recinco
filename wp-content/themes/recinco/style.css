@@ -1,0 +1,323 @@
+/*
+Theme Name: recinco
+Theme URI: http://underscores.me/
+Author: Roz
+Author URI: http://underscores.me/
+Description: Theme for Recinco Treadmill Bands
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: recinco
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+recinco is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+/* Roz custom styles */
+
+/* Colors
+
+	dark blue logo - #244976
+	darker blue - #123560
+	darkest blue - #052244
+	lightest blue - #5E7DA3 
+	complentary yellow - #B47F2C
+
+
+
+	sea green logo - #5ea5ac
+	light sea green - #8FCACF
+	lightest sea green - #C6E8EB
+
+	darkest sea green - #23747B
+
+	complentary orange - #FFC18A
+
+ */
+
+/* Import google fonts */
+@import url(https://fonts.googleapis.com/css?family=Fjalla+One|Average);
+
+/* General / Layout */
+
+body, p, .site {
+  font-family: 'Average', serif;
+}
+
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.site a {
+	color: #5ea5ac;
+	text-decoration: none;
+}
+
+.site a:hover, .site a:active, .site a:focus {
+	color: #FFC18A;
+	text-decoration: none;
+}
+
+.container h1, .container h2, .container h3, 
+.container h4, .container h5, .container h6,
+.container h1 a, .container h2 a, .container h3 a,  
+.container h4 a, .container h5 a, .container h6 a {
+	color: #244976;
+  font-family: 'Fjalla One', sans-serif;
+}
+
+/* Header styles */
+
+.site-header {
+	margin: 0 0 2% 0;
+}
+
+.logo {
+	margin: 1% 0 0 0;
+}
+
+.logo img {
+	max-height: 80px;
+	width: auto;
+}
+
+.logo h3 {
+	margin: 0;
+}
+
+/* Dark blue top bar */
+
+.site-title a {
+	color: #244976;
+	text-align: center;
+}
+
+.call-top {
+	background: #244976;
+	color: #8FCACF;
+}
+
+.call-top h4 {
+	color: #8FCACF;
+}
+
+.call-top a {
+	color: #8FCACF;
+}
+
+.call-top p {
+	color: #FFC18A;
+	margin: 9px 0 0 0;
+}
+
+.social-media-squares a {
+	border-right: 1px solid #8FCACF;
+  display: block;
+  float: left;
+  font-size: 1.6em;
+  margin: 5px 10px 0 0;
+  padding: 0 10px 0 0;
+  text-align: center;
+}
+
+.social-media-squares a:last-child {
+	border: none;
+}
+
+/* Nav menu */
+.current-menu-item a, 
+.site .navbar-nav > li > a:hover, 
+.site .navbar-nav > li > a:focus {
+	background: #C6E8EB;
+  color: #244976;
+}
+
+.navbar-nav > li.menu-item > a {
+	padding: 45px 20px 41px 20px; 
+}
+
+#site-navigation.navbar {
+	border: none;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 18px;
+  font-weight: 200;
+  letter-spacing: 1px;
+	margin: 0;
+}
+
+/* Blog styles */
+.post {
+	border-bottom: 1px solid #ccc;
+	margin: 0 0 1em 0;
+	padding: 0 0 1em 0;
+}
+
+.edit-link {
+	margin: 0 1em;
+}
+
+/* Sidebar styles */
+
+#secondary .widget {
+	border-bottom: 1px solid #ccc;
+	padding: 1em 0.5em;
+}
+
+#secondary .widget:last-child {
+	border: none;
+}
+
+.widget ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.widget h2 {
+	color: #244976;
+	margin: 0;
+}
+
+/* Homepage slider */
+.carousel {
+  height: 50%;
+}
+
+.item,
+.active,
+.carousel-inner {
+  height: 100%;
+}
+
+.home .soliloquy-container {
+  margin: 0 auto;
+  /* max-width: 100% !important; */
+}
+
+/* Homepage styles */
+.homepage img {
+  height: auto;
+  max-width: 100%;
+}
+
+/* Footer Styles */
+.site-footer {
+  background: #244976 url("treadmill-closeup-footer.png") no-repeat center center; 
+  color: #8FCACF;
+  margin: 1em 0 0 0;
+  overflow: hidden;
+}
+
+.site-footer a, .site-footer h3, .site-footer h4,
+.site-footer h3 a, .site-footer h4 a {
+	color: #FFC18A;
+}
+
+.row .footer-news, .row .footer-choose-us, .row .footer-contact {
+	background:rgb(36,75,118);  
+  background: transparent\9;  
+  background:rgba(36,75,118,0.5);  
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66000000,endColorstr=#66000000);  
+  zoom: 1;  
+	padding: 1em;
+	margin: 1em;
+	min-height: 220px;
+}
+
+.footer-entry {
+  border-bottom: 1px solid;
+  clear: both;
+  font-size: 0.85em;
+  margin: 0.5em 0;
+  overflow: hidden;
+  padding: 0 0 0.5em 0;
+}
+
+.footer-entry:last-child {
+  border: none;
+}
+
+.footer-entry a {
+  display: block;
+  float: left;
+  margin-right: 1em;
+}
+
+.footer-entry img {
+  float: left;
+  height: auto;
+  max-width: 80px;
+}
+
+.footer-entry h4 {
+  clear: none;
+  font-size: 1em;
+  line-height: 1em;
+}
+
+.footer-reservations p {
+  font-size: 0.75em;
+}
+
+.footer-contact li {
+  display: block;
+  font-size: 0.75em;
+  margin: 0 0 1em 0;
+  overflow: hidden;
+  padding-left: 1.7em;
+  position: relative;
+  width: auto;
+}
+
+.footer-address:before,
+.footer-phone:before,
+.footer-email:before  {
+  font-family: 'FontAwesome';
+  font-size: 1em;
+  left: 0.25em;
+  padding-left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.footer-address:before {
+  content: "\f015";
+  top: 0.77em;
+}
+
+.footer-phone:before {
+  content: "\f095";
+}
+
+.footer-email:before {
+  content: "\f0e0";
+}
+
+/* Responsive queries */
+
+@media screen and (max-width: 768px) {
+
+  /* Footer contact styles for small devices */
+  .site-footer .footer-contact {
+    float: none; 
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .footer-contact-address {
+    margin: 0 auto;
+    max-width: 25%;
+  }
+}
+
